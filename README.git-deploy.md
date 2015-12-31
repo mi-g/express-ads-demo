@@ -18,7 +18,7 @@ For this example, the git/web server is *myserver*, the server app is *mysite*
 * from the client machine, use ssh keys: *ssh-copy-id git@myserver*
 * install git on the server: *apt-get install git*
 * create git repository directory: *mkdir -p /home/git; chown git.git /home/git; ln -s /home/git /var*
-* create app git repository: *su git -c "cd /home/git; mkdir mysite.git; cd mysite.git, git --bare init"*
+* create app git repository: *su git -c "cd /home/git; mkdir mysite.git; cd mysite.git; git --bare init"*
 * from the client side, the remote url to be used is *git@myserver:/var/git/mysite.git*
 * from the server git account, install nvm as of <https://github.com/creationix/nvm>
 	* curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.29.0/install.sh | bash
@@ -30,7 +30,7 @@ For this example, the git/web server is *myserver*, the server app is *mysite*
 * create file */home/git/mysite.git/hooks/post-receive* (see below, with execution rights)
 * create scripts directory: *mkdir /etc/mysite*
 * create files in scripts directory (with execution rights, see below)
-* make git app execution repository: *cd /home; mkdir mysite; chown git.git mysite; su git -c "git clone /var/git/mysite mysite; cd mysite; git checkout prod"*
+* make git app execution repository: *cd /home; mkdir mysite; chown git.git mysite; su git -c "git clone /var/git/mysite.git mysite; cd mysite; git checkout prod"*
 
 
 Files
