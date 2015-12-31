@@ -85,11 +85,11 @@ Ready to go ?
 | Param | Default | Description |
 | ----- | ------- | ----------- |
 | `login`     | `"admin"`   | the username to be used when login to the admin section of the site|
-| `password`  | SHA256 for `"password"` | the SHA256 hash of the admin password. On linux, you can get it easily from the command `echo -n "mypassword"` &#124; `sha256sum` |
-| `sessionSecret` | a string | just put any string here |
+| `password`  | SHA256 for `"password"` | the SHA256 hash of the admin password. On linux, you can get it easily from the command <code>echo -n "mypassword" &#124; sha256sum</code> |
+| `sessionSecret` | a string | just put any string here but change the default value |
 | `staticMaxAge` | `"7d"` | the duration before static resources cache expires in the browser |
 | `siteName` | | a human name for your site |
-| `domain` | `null` | if not `null`, received GET requests that do not match this exact domain are redirected | 
+| `domain` | `null` | if not `null`, received GET requests that do not match this exact domain are redirected to the specified domain, keeping the protocol, path and query unchanged | 
 | `shutdownTimeout` | `5` | when a graceful shutdown is requested, the number of seconds to wait before forcing the process killing |
 | `sessionExpiration` | `259200` | the session time-to-live in seconds. 3 days by default |
 | `parseUserAgent` | `true` | if set, visitor browser info is available on `req.browser` |
@@ -103,11 +103,11 @@ Ready to go ?
 | `https.bind` | `null` | by default, HTTPS listens to any network interface. Set an IP address to listen to a specific interface |
 | `https.keyFile` | | the path to a local file containing the certificate key |
 | `https.certFile` | | the path to a local file containing the certificate |
-| `staticBypassCache` | `true` | in order to accomodate long cache expiration for performance and the ability to update stylesheets and scripts, the publish resource URL includes a random number that changes everytime the server is restarted |
+| `staticBypassCache` | `true` | in order to accomodate long cache expiration for performance and the ability to update stylesheets and scripts, the publish resource URL includes a random number that changes everytime the server application is restarted |
 | `concatStyles` | `true` | should local stylesheets be concatenated. It is a good idea to set it to `false` in the development environment |
-| `minifyStyles` | `true` | should local concatenated stylesheet be minified |
+| `minifyStyles` | `true` | should the local concatenated stylesheet be minified |
 | `concatScripts` | `true` | should local scripts be concatenated. Set it to `false` in the development environment |
-| `minifyScripts` | `true` | should local concatenated script be minified |
+| `minifyScripts` | `true` | should the local concatenated script be minified |
 | `criticalPathStyles` | `true` | when set, the server will make a request to itself to determine the minimum CSS that should be included inline in order to render the above-the-fold part of the page |    
 | `forceAdmin` | `false` | when set, the user is automatically authenticated as admin. Convenient when developing on the admin section, not for production |
 | `defaultScripts` | some local JS files | an array of local JS files to be included in every page |
@@ -146,7 +146,7 @@ app.get('mypath',function(req.res) {
 
 By doing so, the object you pass to the template will also contain some overwritable entries used to setup the header and footer for the HTML page.
 
-You may want to use the following variables in your own template content:
+In addition, this gives access to following variables, available in your template:
 
 | Parameter | Description |
 | --------- | ----------- |
@@ -154,16 +154,22 @@ You may want to use the following variables in your own template content:
 | `config` | the content of the `config.json` file | 
 | `user` | the logged user or `null` |
 
-In addition, you can modify the scripts and styles to be loaded in a specific page with:
+For instance:
+
+```
+<% if(user) { %><p>Hello <%= user.username %><% } %>
+<p>You are on <%= config.siteName %>. Your IP is <%= req.ip %></p>
+```
+
+You can modify the scripts and styles to be loaded in a specific page with:
 
 | Parameter | Description |
 | --------- | ----------- |
 | `scripts` | an array of local scripts that will be appended to the list of default scripts to be included (concatenated and minified). For instance, `scripts: ['/js/angular.js','/js/angular-sanitize.js']` add those two scripts to the page |
-| `extScripts` | an array of external scripts to be appended to the default list of external scripts. For instance `extScripts: ['//cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.8/angular.min.js]` |
+| `extScripts` | an array of external scripts to be appended to the default list of external scripts. For instance `extScripts: ['//cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.8/angular.min.js]`. Note that external scripts are not concatenated nor minified |
 | `styles` | an array of local stylesheets to be appended to the default list of styles |
-| `extStyles` | an array of external stylesheets to be appended to the default list of external styles |
-| `criticalPathStyles` | `null` by default. If CSS critical path is used (`criticalPathStyles` set to `true` in `config.json`), the system will create a CSS cache string (5K to 10K) for each URL path (without the query part) it serves. So, if you have a route like `/article/:id/view`, this will lead to many useless entries if you have a large number of articles, while they all share the same critical path CSS. By setting parameter `criticalPathStyles` to something like `"article-view"`,
-this string will be used a the cache key instead of the URL path | 
+| `extStyles` | an array of external stylesheets to be appended to the default list of external styles. External styles are not concatenated nor minified |
+| `criticalPathStyles` | `null` by default. If CSS critical path is used (`criticalPathStyles` set to `true` in `config.json`), the system will create a CSS cache string (5K to 10K) for each URL path (without the query part) it serves. So, if you have a route like `/article/:id/view`, this will lead to many useless entries if you have a large number of articles, while they all share the same critical path CSS. By setting parameter `criticalPathStyles` to something like `"article-view"`, this string will be used as the cache key instead of the URL path | 
 
 The template variables object also contains some functions used to setup the optimized scripts and styles loading:
 
@@ -206,7 +212,7 @@ When using this template, you may be interested in those template variables:
 | `pageTitle` | the HTML title for the page |
 | `nav` | a object describing the primary menu. See `/controllers/nav.json` for the structure |
 
-If you set `inline` as a content to be included, you can also use those parameters to create simple content:
+If you set `inline` as a content to be included, you can also use those parameters to create very simple content:
 
 | Parameter | Description |
 | --------- | ----------- |
@@ -225,7 +231,8 @@ In the template variable object:
 
 | Parameter | Description |
 | --------- | ----------- |
-| `gaEvents` | some events to be sent to Google Analytics from the user browser. For instance, `[["Article","view",42]]` |
+| `gaPath` | by default the page reported to GA is the page path, but if your route is say `/article/:id/view` and you are more interested in the global visits to this type of page than to each individual page, you can set `gaPath` to something like `/article/any/view` |
+| `gaEvents` | some events to be sent to Google Analytics from the user browser. For instance, `[["Article","view","myarticle",1]]` |
 
 It is also possible to send events on behalf of the user from the server itself:
 
@@ -266,9 +273,82 @@ app.get('/secure-page',exskel.forceHttps(function(req,res) {
 
 # Additional notes
 
+## Performance
+
 Regarding the concatenation / minification  of styles and scripts and the CSS critical path, it may take a couple of browser refreshs
 before seeing the effect in the HTML code. This is because those operations are performed in background while we answer the request as
-quickly as we can even if we don't have the full data.
+quickly as we can, even if we don't have the optimized data yet.
 
+For instance, right after starting the server application, if you visit `view-source:http://localhost:9080/`, you see:
 
+```
+<html>
+	<head>
+	...		
+<link rel='prefetch' href='//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css'/>
+<link rel='prefetch' href='/css/bootstrap.min.css?YoCvg'/>
+<link rel='prefetch' href='/css/bootstrap-theme.min.css?YoCvg'/>
+<link rel='prefetch' href='/css/main.css?YoCvg'/>
+<link rel="subresource" href="/js/jquery.min.js?YoCvg">
+<link rel="subresource" href="/js/jquery.dropotron.min.js?YoCvg">
+<link rel="subresource" href="/js/bootstrap.min.js?YoCvg">
+<link rel="subresource" href="/js/skel.min.js?YoCvg">
+<link rel="subresource" href="/js/skel-viewport.min.js?YoCvg">
+<link rel="subresource" href="/js/util.js?YoCvg">
+<link rel="subresource" href="/js/main.js?YoCvg">
+<script>!function(e,t,r){function n(){for(;d[0]&&"loaded"==d[0][f];)c=d.shift(),c[o]=!i.parentNode.insertBefore(c,i)}for(var s,a,c,d=[],i=e.scripts[0],o="onreadystatechange",f="readyState";s=r.shift();)a=e.createElement(t),"async"in i?(a.async=!1,e.head.appendChild(a)):i[f]?(d.push(a),a[o]=n):e.write("<"+t+' src="'+s+'" defer></'+t+">"),a.src=s}(document,"script",["/js/jquery.min.js?YoCvg","/js/jquery.dropotron.min.js?YoCvg","/js/bootstrap.min.js?YoCvg","/js/skel.min.js?YoCvg","/js/skel-viewport.min.js?YoCvg","/js/util.js?YoCvg","/js/main.js?YoCvg"])</script>
+	</head>
+	<body>
+	...
+<link rel='stylesheet' href='/css/bootstrap.min.css?YoCvg'/>
+<link rel='stylesheet' href='/css/bootstrap-theme.min.css?YoCvg'/>
+<link rel='stylesheet' href='/css/main.css?YoCvg'/>
+	</body>
+</html>
+```
 
+Refresh the page once. Now you get:
+
+```
+<html>
+	<head>
+	...
+<link rel='prefetch' href='//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css'/>
+<link rel='prefetch' href='/css/cache-6ad2713fc4ddfe5d801278b4fef4e5d3.css?YoCvg'/>
+<link rel="subresource" href="/js/cache-ade755560a51198ea7c00320d5baf400.js?YoCvg">
+<script>!function(e,t,r){function n(){for(;d[0]&&"loaded"==d[0][f];)c=d.shift(),c[o]=!i.parentNode.insertBefore(c,i)}for(var s,a,c,d=[],i=e.scripts[0],o="onreadystatechange",f="readyState";s=r.shift();)a=e.createElement(t),"async"in i?(a.async=!1,e.head.appendChild(a)):i[f]?(d.push(a),a[o]=n):e.write("<"+t+' src="'+s+'" defer></'+t+">"),a.src=s}(document,"script",["/js/cache-ade755560a51198ea7c00320d5baf400.js?YoCvg"])</script>
+	</head>
+	<body>
+	...
+<link rel='stylesheet' href='//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css'/>
+<link rel='stylesheet' href='/css/cache-6ad2713fc4ddfe5d801278b4fef4e5d3.css?YoCvg'/>
+	</body>
+</html>	
+```
+
+As you can see, scripts and styles local resources have been concatenated (and also minified) to single `cache-xxx.js` and `cache-xxx.css` files. Refresh
+again to see:
+
+```
+<html>
+	<head>
+	...
+<style>html{-webkit-text-size-adjust:100%...#main{margin-top:44px}}</style>
+<link rel='prefetch' href='//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css'/>
+<link rel='prefetch' href='/css/cache-6ad2713fc4ddfe5d801278b4fef4e5d3.css?YoCvg'/>
+<link rel="subresource" href="/js/cache-ade755560a51198ea7c00320d5baf400.js?YoCvg">
+<script>!function(e,t,r){function n(){for(;d[0]&&"loaded"==d[0][f];)c=d.shift(),c[o]=!i.parentNode.insertBefore(c,i)}for(var s,a,c,d=[],i=e.scripts[0],o="onreadystatechange",f="readyState";s=r.shift();)a=e.createElement(t),"async"in i?(a.async=!1,e.head.appendChild(a)):i[f]?(d.push(a),a[o]=n):e.write("<"+t+' src="'+s+'" defer></'+t+">"),a.src=s}(document,"script",["/js/cache-ade755560a51198ea7c00320d5baf400.js?YoCvg"])</script>
+	</head>
+	<body>
+	...
+<link rel='stylesheet' href='//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css'/>
+<link rel='stylesheet' href='/css/cache-6ad2713fc4ddfe5d801278b4fef4e5d3.css?YoCvg'/>
+	</body>
+</html>	
+```
+
+The additional inline `<style>...</style>` represents the minimal CSS required to display properly the visible part (above-the-fold) of the page. Additional styles (complete CSS with hovers, transitions, ...) are loaded shortly after but from a visitor point of view, the page loaded quickly and had immediately its final look.
+
+Additional refreshes won't change the HTML code.
+
+Also, if you are concerned about performance and did not setup a CDN (like Cloudflare) yet, you should do so as your priority.
