@@ -8,11 +8,11 @@
 		"express",
 		"skeleton",
 		"exskel",
-		"web site"
-	    "node",
-	    "bootstrap",
-    	"fontawesome",
-   	 	"framework"
+		"web site",
+		"node",
+		"bootstrap",
+		"fontawesome",
+		"framework"
    	],
    	"homepage": "https://github.com/mi-g/exskel",
    	"bugs": "https://github.com/mi-g/exskel/issues",
