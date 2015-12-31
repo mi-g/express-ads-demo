@@ -1,0 +1,12 @@
+#!/bin/sh
+
+LOGFILE='/var/log/git.log'
+echo $(date) >> $LOGFILE
+read line
+echo $line >> $LOGFILE
+BRANCH=$(echo $line | sed 's/^.*\/\([^\/]*$\)/\1/')
+
+if [ "$BRANCH" = "prod" ]; then
+    /etc/mysite/pull-prod.sh
+    sudo /etc/mysite/do-restart-prod.sh &
+fi

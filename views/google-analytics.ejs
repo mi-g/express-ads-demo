@@ -1,0 +1,14 @@
+<% if(config.gaTrackingCode) { %>
+<!-- Google Analytics -->
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', '<%= config.gaTrackingCode %>', '<%= req.hostname %>');
+ga('send', 'pageview','<%= gaPath || req.path %>');
+<% if(locals.gaEvents) {
+	gaEvents.forEach(function(event) { %>
+ga('send','event','<%- event.join("','") %>');
+<% })} %>
+</script>
+<script async src='//www.google-analytics.com/analytics.js'></script>
+<!-- End Google Analytics -->
+<% } %>

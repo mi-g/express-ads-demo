@@ -1,0 +1,51 @@
+{
+	"login": "admin",
+	"password": "5e884898da28047151d0e56f8dc6292773603d0d6aabbdd62a11ef721d1542d8",
+	"sessionSecret": "j98n41eMrFmTY",
+	"staticMaxAge": "7d",
+	"siteName": "Exskel",
+	"domain": null,
+	"shutdownTimeout": 5,
+	"sessionExpiration": 259200,
+	"parseUserAgent": true,
+	"geoip": true,
+	"gaTrackingCode": null,
+	"http": {
+		"port": 9080,
+		"disabled": false,
+		"bind": null
+	},
+	"https": {
+		"port": 9443,
+		"disabled": true,
+		"bind": null,
+		"keyFile": "/path/to/file.key",
+		"certFile": "/path/to/file.crt"
+	},
+	"defaultScripts": [
+		"/js/jquery.min.js",
+		"/js/jquery.dropotron.min.js",
+		"/js/bootstrap.min.js",
+		"/js/skel.min.js",
+		"/js/skel-viewport.min.js",
+		"/js/util.js",
+		"/js/main.js"
+	],
+	"defaultExtScripts": [
+	],
+	"defaultStyles": [
+		"/css/bootstrap.min.css",
+		"/css/bootstrap-theme.min.css",
+		"/css/main.css"
+	],
+	"defaultExtStyles": [
+		"//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css"
+	],
+	"staticBypassCache": true,
+	"concatStyles": true,
+	"minifyStyles": true,
+	"concatScripts": true,
+	"minifyScripts": true,
+	"criticalPathStyles": true,
+	"forceAdmin": false
+}

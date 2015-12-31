@@ -1,0 +1,21 @@
+<nav id="nav">
+	<ul>
+	<% nav.forEach(function(entry) {
+		if(entry.admin && (!req.user || !req.user.admin))
+			return; 
+	%>
+		<li><a href="<%= entry.link %>" class="<%=
+			(entry.section || entry.link) == (locals.section || req.path) ? "current-page-item":""
+		%>"><%= entry.text %></a>
+		<% if(entry.sub) { %>
+			<ul>
+			<% entry.sub.forEach(function(subentry) { %>
+				<li><a href="<%= subentry.link %>"><%= subentry.text %></a></li>
+			<% }); %>
+			</ul>
+		<% } %>
+		</li>
+	<% }); %>
+	</ul>
+</nav>
+

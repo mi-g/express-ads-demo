@@ -1,0 +1,13 @@
+[{
+	"text": "Admin 1",
+	"link": "/admin/page1"
+},{
+	"text": "Admin 2",
+	"link": "/admin/page2"
+},{
+	"text": "Admin 3",
+	"link": "/admin/page3"
+},{
+	"text": "Logout",
+	"link": "/user/logout"
+}]

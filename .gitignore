@@ -1,0 +1,5 @@
+/.project
+/node_modules/
+/config.json
+/sessions/
+/tmp/

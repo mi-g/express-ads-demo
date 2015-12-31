@@ -1,0 +1,49 @@
+{
+	"name":"Exskel",
+	"version":"0.0.1",
+	"private":true,
+	"description":"Express web site skeleton",
+	"main":"app.js",
+	"keywords":[
+		"express",
+		"skeleton",
+		"exskel",
+		"web site"
+	    "node",
+	    "bootstrap",
+    	"fontawesome",
+   	 	"framework"
+   	],
+   	"homepage": "https://github.com/mi-g/exskel",
+   	"bugs": "https://github.com/mi-g/exskel/issues",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/mi-g/exskel.git"
+	},
+   	"author":"Michel Gutierrez",
+	"contributors": "https://github.com/mi-g/exskel/graphs/contributors",
+	"license":"MPL-2.0",
+	"engines": {
+		"node": ">=4.0.0"
+	},
+	"dependencies":{
+		"body-parser":"^1.12.3",
+		"cookie-parser":"^1.4.0",
+		"express":"^4.12.3",
+		"ejs":"^2.3.4",
+		"extend":"^3.0.0",
+		"express-session":"^1.11.3",
+		"passport":"^0.3.0",
+		"passport-local":"^1.0.0",
+		"geoip-lite":"^1.1.6",
+		"uglify-js":"^2.4.24",
+		"clean-css":"^3.4.5",
+		"ua-parser":"^0.3.5",
+		"compression":"^1.6.0",
+		"session-file-store":"^0.0.24",
+		"penthouse":"^0.8.2",
+	    "universal-analytics": "^0.3.9"
+	},
+	"scripts":{
+	}
+}

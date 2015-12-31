@@ -1,0 +1,17 @@
+<% if(locals.title) { %>
+<h2><%= locals.title %></h2>
+<% } %>
+
+<% if(locals.text) { %>
+<p><%= locals.text %></p>
+<% } %>
+
+<% if(locals.paragraphs) {
+	locals.paragraphs.forEach(function(paragraph) {
+%>
+	<p><%= paragraph %></p>
+<% })} %>
+
+<% if(locals.html) { %>
+<%- locals.html %>
+<% } %>
