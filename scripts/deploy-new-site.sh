@@ -9,9 +9,9 @@ if [ "x$1" = "x" ]; then
 fi
 
 SITE=$1
-VARGIT=/tmp/var/git
+VARGIT=/var/git
 REPO=$VARGIT/$SITE.git
-SITEREPO=/tmp/home/$SITE
+SITEREPO=/home/$SITE
 TMPREPO=/tmp/$SITE
 
 if [ -e "/etc/$SITE" ]; then
