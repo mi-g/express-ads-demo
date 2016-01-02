@@ -365,4 +365,4 @@ The additional inline `<style>...</style>` represents the minimal CSS required t
 
 Additional refreshes won't change the HTML code.
 
-Also, if you are concerned about performance and did not setup a CDN (like Cloudflare) yet, you should do so as your priority.
+Also, if you are concerned about performance and did not setup a CDN (like [Cloudflare](https://www.cloudflare.com/)) yet, you should do so as your priority.
