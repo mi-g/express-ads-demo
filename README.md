@@ -69,13 +69,13 @@ memory-held data to the disk before the process exits
 * Force HTTPS: you can easily force some pages (like for payments or handling sensitive information) to be opened in HTTPS if enabled
 * Admin section: the /admin/* part of the site requires to be logged and direct to a login page if not authenticated  
 
-# Install
+# Install for development
 
 Ready to go ?
 
 * clone the project to a local directory
 * copy *config.default.json* to *config.json*
-* edit *config.json* parameters (see below)
+* edit *config.json* parameters (see below for parameters details. You probably want to set `concatStyles` and `concatScripts` to `false`)
 * go to your project directory
 * `npm install`
 * `node app.js`
@@ -115,10 +115,24 @@ Ready to go ?
 | `defaultStyles` | some local CSS files | an array of local CSS files to be included in every page |
 | `defaultExtScripts` | some CSS URLs | an array of URLs to external CSS resources to be included in every page |
 
-## Deploying with GIT
+## Install for production (deploying with GIT)
 
 Setting up your server to allow deploying a new version to the server just by pushing commits to the `prod` branch is explained in details in
 [this tutorial](README.git-deploy.md).
+
+From the development repository: 
+* `git remote add myserver git@myserver:/var/git/mysite.git`
+* `git push myserver prod`
+
+Note that the first push to *prod*, you will get some errors because the file *config.json* has not been created yet
+
+From the server:
+* `cd /home/mysite`
+* `cp config.default.json config.json`
+* edit site parameters in file *config.json*
+* `/etc/mysite/restart-prod.sh`
+
+New pushes to the *prod* branch on server *myserver* will automatically update and restart the server application. 
 
 # Using the skeleton
 
