@@ -19,9 +19,9 @@ The whole skeleton is designed with performance in mind. It provides:
 * non-blocking styles and scripts loading with prefetch when browser-supported
 * automatic concatenation and minification of stylesheets
 * automatic concatenation and minification of scripts
-* automatic generation and inline integration of critical path CSS
+* automatic generation and inline integration of above-the-fold critical path CSS
 
-All of these, along with using a CDN, ensures a 95% to 100% score on [Google Page Speed Insights](https://developers.google.com/speed/pagespeed/insights).
+All of these, along with using a CDN, ensure a 95% to 100% score on [Google Page Speed Insights](https://developers.google.com/speed/pagespeed/insights).
 
 ## Deployment
 
