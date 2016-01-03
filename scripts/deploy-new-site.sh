@@ -83,3 +83,6 @@ for FILE in $FILES; do
 	DEST=$(echo $FILE | sed "s/mysite/$SITE/g")
 	CopyFileToSite $SCRIPTSDIR/$FILE $DEST
 done
+
+chmod a+x $REPO/hooks/post-receive /etc/$SITE/*
+
