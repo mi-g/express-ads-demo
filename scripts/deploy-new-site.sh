@@ -63,7 +63,6 @@ fi
 
 function CopyFileToSite {
 	echo "Creating $2 from $1"
-	echo "executing: mkdir -p $(dirname $2)"
 	mkdir -p $(dirname $2)
 	if [[ $? != 0 ]]; then exit -1; fi
 	sed "s/mysite/$SITE/g" $1 > $2
