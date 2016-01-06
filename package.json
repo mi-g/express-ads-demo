@@ -23,9 +23,6 @@
    	"author":"Michel Gutierrez",
 	"contributors": "https://github.com/mi-g/exskel/graphs/contributors",
 	"license":"MPL-2.0",
-	"engines": {
-		"node": ">=4.0.0"
-	},
 	"dependencies":{
 		"body-parser":"^1.12.3",
 		"cookie-parser":"^1.4.0",
