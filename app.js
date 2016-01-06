@@ -40,6 +40,24 @@ app.use(session({
 
 exskel.post(app);
 
+require('express-ads')(app,{
+	adminPath: "/admin/eas",
+	standaloneAdminUI: false,
+	auth: function(req,res,next) {
+		// no special auth for express-ads admin as it is handled 
+		// at site level for every route under /admin
+		next();
+	},
+	adminStyles: {
+		fontAwesome: null,
+		bootstrap: null,
+	},
+	adminScripts: {
+		jquery: null,
+		bootstrap: null,
+	},
+});
+
 require('./controllers/admin.js')(app);
 require('./controllers/content.js')(app);
 

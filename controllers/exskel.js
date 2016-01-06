@@ -286,6 +286,7 @@ module.exports.locals = function(req,data) {
 		extScripts: [],
 	},data);
 	locals.req = req;
+	locals.ad = req.deliverAd;
 	locals.config = config;
 	locals.nav = nav || [];
 	locals.user = req.user || null;

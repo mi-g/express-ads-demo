@@ -114,6 +114,11 @@ module.exports = function(app) {
 		}));
 	});
 
+	app.get("/admin/ads",function(req, res) {
+		res.render('page-1col',AdminLocals(req,{
+			content: 'ads',
+		}));
+	});
 	
 };
 
