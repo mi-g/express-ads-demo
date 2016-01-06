@@ -37,7 +37,7 @@ but you can easily use any template you want with a minimum of effort.
 
 As is, Exskel only supports a very basic authentication scheme, used to access the admin part of the site: single user/password provided
 in the site configuration file. This might be a good fit if you are webmastering a simple site and just need to access some administration 
-pages. But it won't help if you need a fully featured multi-users environment. 
+pages. But it won't help if you need a fully featured multi-users environment.
 
 ## Requirements / Non-requirements
 
@@ -284,6 +284,11 @@ app.get('/secure-page',exskel.forceHttps(function(req,res) {
 	res.render(...);
 }));
 ``` 
+
+### Ads management 
+
+[Express-ads](https://github.com/mi-g/express-ads) has been added so you can distribute ads from your web site. Express-ads admin
+interface is integrated into the site.
 
 # Additional notes
 
