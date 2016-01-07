@@ -7,27 +7,27 @@
 /* Reusable */
 
 	.button {
-		background-image: url("images/ie/button.svg");
+		background-image: url("/images/ie/button.svg");
 	}
 
 		.button:hover {
-			background-image: url("images/ie/button-hover.svg");
+			background-image: url("/images/ie/button-hover.svg");
 		}
 
 /* Header */
 
 	#header-wrapper {
-		background-image: url("images/ie/header-wrapper.svg");
+		background-image: url("/images/ie/header-wrapper.svg");
 	}
 
 	#header {
-		background-image: url("images/ie/header.svg");
+		background-image: url("/images/ie/header.svg");
 	}
 
 		#header nav a.current-page-item {
-			background-image: url("images/ie/nav-a.svg");
+			background-image: url("/images/ie/nav-a.svg");
 		}
 
 		#header nav a:hover {
-			background-image: url("images/ie/nav-a-hover.svg");
+			background-image: url("/images/ie/nav-a-hover.svg");
 		}

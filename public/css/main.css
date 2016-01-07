@@ -1451,7 +1451,7 @@ input[type="file"] > input[type="button"]::-moz-focus-inner {
 		/* Banner */
 
 			#banner-wrapper {
-				background: #c8d2bc url(images/bg1.png);
+				background: #c8d2bc url(/images/bg1.png);
 				padding: 2em 0;
 			}
 
@@ -1466,7 +1466,7 @@ input[type="file"] > input[type="button"]::-moz-focus-inner {
 				box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
 				border-radius: 10px;
 				padding: 20px;
-				background: #fff url(images/banner.jpg) no-repeat 20px 20px;
+				background: #fff url(/images/banner.jpg) no-repeat 20px 20px;
 				background-size: 1160px 265px;
 			}
 
@@ -1680,7 +1680,7 @@ input[type="file"] > input[type="button"]::-moz-focus-inner {
 		/* Banner */
 
 			#banner-wrapper {
-				background: #c8d2bc url(images/bg1.png);
+				background: #c8d2bc url(/images/bg1.png);
 				display: none;
 			}
 
@@ -1688,7 +1688,7 @@ input[type="file"] > input[type="button"]::-moz-focus-inner {
 				position: relative;
 				width: 100%;
 				height: 240px;
-				background: #fff url(images/banner.jpg) no-repeat;
+				background: #fff url(/images/banner.jpg) no-repeat;
 				background-size: 100% 100%;
 				position: relative;
 			}
