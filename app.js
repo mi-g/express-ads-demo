@@ -56,6 +56,10 @@ require('express-ads')(app,{
 		jquery: null,
 		bootstrap: null,
 	},
+	addons: [
+	    require('express-ads-chitika'),
+	    require('express-ads-adsense'),
+	],
 });
 
 require('./controllers/admin.js')(app);

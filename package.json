@@ -40,7 +40,9 @@
 		"session-file-store":"^0.0.24",
 		"penthouse":"^0.8.2",
 	    "universal-analytics": "^0.3.9",
-	    "express-ads": "*"
+	    "express-ads": "*",
+	    "express-ads-adsense": "*",
+	    "express-ads-chitika": "*"
 	},
 	"scripts":{
 	}
