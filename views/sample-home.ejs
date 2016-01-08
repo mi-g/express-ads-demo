@@ -1,134 +1,156 @@
 
-<%- ad('home3',{
-	classes: ["text-center"],
-	styles: {
-		"margin-bottom": "50px"
-	}
-}) %>
+<%- ad('home-top') %>
 	
 
 <div class="row main-row">
-	<div class="4u 12u(mobile)">
-
+<%- ad('home-scrapper-left') %>
+	<div class="9u 12u(mobile)">
 		<section>
-			<h2>Welcome to Minimaxing!</h2>
-			<%- ad('home1') %>
-			<p>This is <strong>Minimaxing</strong>, a fully responsive HTML5 site template designed by <a href="http://n33.co">n33</a> and released for free by <a href="http://html5up.net">HTML5 UP</a>. It features
-			a simple, lightweight design, solid HTML5 and CSS3 code, and full responsive support for desktop, tablet, and mobile displays.</p>
+			<h2>Live demo</h2>
+			
+			<%- ad('home-rect-left') %>
+			
+			<%- ad('home-rect-right') %>
+			
+			<p>This web site is a live demo of <a href="https://github.com/mi-g/express-ads" target="express-ads">express-ads</a>, 
+			a <a href="https://nodejs.org/" target="_blank">Node.js</a> module
+			dedicated to distributing and managing ads on an <a href="http://expressjs.com/" target="_blank">Express</a>-based web site.</p>
+			
+			<p>The demo site is based on <a href="https://github.com/mi-g/exskel" target="_blank">Exskel</a>, a skeleton to create Express sites
+			from.</p>
+			
+			<p>You can play with the ads configuration, modify, create or remove campaigns, banners, creatives and inventory areas. Just keep in mind
+			that those changes are only for you to see and will be destroyed after a few minutes of inactivity.</p> 
+			
 			<footer class="controls">
-				<a href="http://html5up.net" class="button">More cool designs ...</a>
+				<a href="https://github.com/mi-g/express-ads" target="express-ads" class="button">More about express-ads ...</a>
 			</footer>
 		</section>
 
 	</div>
-	<div class="4u 12u(mobile)">
-
-		<section>
-			<h2>Who are you guys?</h2>
-			<%- ad('home2') %>
-			<ul class="small-image-list">
-				<li>
-					<a href="#"><img src="images/pic2.jpg" alt="" class="left" /></a>
-					<h4>Jane Anderson</h4>
-					<p>Varius nibh. Suspendisse vitae magna eget et amet mollis justo facilisis amet quis.</p>
-				</li>
-				<li>
-					<a href="#"><img src="images/pic1.jpg" alt="" class="left" /></a>
-					<h4>James Doe</h4>
-					<p>Vitae magna eget odio amet mollis justo facilisis amet quis. Sed sagittis consequat.</p>
-				</li>
-			</ul>
-		</section>
-
-	</div>
-	<div class="4u 12u(mobile)">
-
-		<section>
-			<h2>How about some links?</h2>
-			<div>
-				<div class="row">
-					<div class="6u 12u(mobile)">
-						<ul class="link-list">
-							<li><a href="#">Sed neque nisi consequat</a></li>
-							<li><a href="#">Dapibus sed mattis blandit</a></li>
-							<li><a href="#">Quis accumsan lorem</a></li>
-							<li><a href="#">Suspendisse varius ipsum</a></li>
-							<li><a href="#">Eget et amet consequat</a></li>
-						</ul>
-					</div>
-					<div class="6u 12u(mobile)">
-						<ul class="link-list">
-							<li><a href="#">Quis accumsan lorem</a></li>
-							<li><a href="#">Sed neque nisi consequat</a></li>
-							<li><a href="#">Eget et amet consequat</a></li>
-							<li><a href="#">Dapibus sed mattis blandit</a></li>
-							<li><a href="#">Vitae magna sed dolore</a></li>
-						</ul>
-					</div>
-				</div>
-			</div>
-		</section>
-
-	</div>
 </div>
+
+<%- ad('home-middle') %>
+
 <div class="row main-row">
-	<div class="6u 12u(mobile)">
+	<p>You can see below what inventory areas have been placed in this sample site. In your own site, you can of course choose whatever
+	placement with whatever names you want.</p>
+</div>
+
+<div class="row main-row">
+
+<%- ad('home-scrapper-right') %>
+
+	<div class="5u 12u(mobile)">
 
 		<section>
-			<h2>An assortment of pictures and text</h2>
-			<p>Duis neque nisi, dapibus sed mattis quis, rutrum et accumsan.
-			Suspendisse nibh. Suspendisse vitae magna eget odio amet mollis
-			justo facilisis quis. Sed sagittis mauris amet tellus gravida
-			lorem ipsum dolor sit amet consequat blandit lorem ipsum dolor
-			sit amet consequat sed dolore.</p>
-			<ul class="big-image-list">
+			<h2>Home ad areas</h2>
+			<ul class="image-list">
 				<li>
-					<a href="#"><img src="images/pic3.jpg" alt="" class="left" /></a>
-					<h3>Magna Gravida Dolore</h3>
-					<p>Varius nibh. Suspendisse vitae magna eget et amet mollis justo
-					facilisis amet quis consectetur in, sollicitudin vitae justo. Cras
-					Maecenas eu arcu purus, phasellus fermentum elit.</p>
+					<a href="#"><img src="images/home-top.png" alt="" class="left" /></a>
+					<h4>home-top</h4>
+					<p>Wide area at the top of the homepage content</p>
+					<br/>
 				</li>
 				<li>
-					<a href="#"><img src="images/pic4.jpg" alt="" class="left" /></a>
-					<h3>Magna Gravida Dolore</h3>
-					<p>Varius nibh. Suspendisse vitae magna eget et amet mollis justo
-					facilisis amet quis consectetur in, sollicitudin vitae justo. Cras
-					Maecenas eu arcu purus, phasellus fermentum elit.</p>
+					<a href="#"><img src="images/home-bottom.png" alt="" class="left" /></a>
+					<h4>home-bottom</h4>
+					<p>Wide area at the bottom of the homepage content</p>
+					<br/>
 				</li>
 				<li>
-					<a href="#"><img src="images/pic5.jpg" alt="" class="left" /></a>
-					<h3>Magna Gravida Dolore</h3>
-					<p>Varius nibh. Suspendisse vitae magna eget et amet mollis justo
-					facilisis amet quis consectetur in, sollicitudin vitae justo. Cras
-					Maecenas eu arcu purus, phasellus fermentum elit.</p>
+					<a href="#"><img src="images/home-middle.png" alt="" class="left" /></a>
+					<h4>home-bottom</h4>
+					<p>Wide area in the middle of the homepage content</p>
+					<br/>
+				</li>
+				<li>
+					<a href="#"><img src="images/home-rect-left.png" alt="" class="left" /></a>
+					<h4>home-rect-left</h4>
+					<p>Compact area at the left of homepage first section</p>
+					<br/>
+				</li>
+				<li>
+					<a href="#"><img src="images/home-rect-right.png" alt="" class="left" /></a>
+					<h4>home-rect-right</h4>
+					<p>Compact area at the right of homepage first section</p>
+					<br/>
+				</li>
+				<li>
+					<a href="#"><img src="images/home-scrapper-left.png" alt="" class="left" /></a>
+					<h4>home-scrapper-left</h4>
+					<p>Sky-scrapper area at the left of homepage first section</p>
+					<br/>
+				</li>
+				<li>
+					<a href="#"><img src="images/home-scrapper-right.png" alt="" class="left" /></a>
+					<h4>home-scrapper-right</h4>
+					<p>Sky-scrapper area at the right of homepage first section</p>
+					<br/>
 				</li>
 			</ul>
 		</section>
 
 	</div>
-	<div class="6u 12u(mobile)">
+	<div class="5u 12u(mobile)">
+	
+		<section>
+			<h2>Common ad areas</h2>
+			<ul class="image-list">
+				<li>
+					<a href="#"><img src="images/header-text.png" alt="" class="left" /></a>
+					<h4>header-text</h4>
+					<p>Text at the bottom of the header of each page</p>
+					<br/>
+				</li>
+			</ul>
+		</section>
 
-		<article class="blog-post">
-			<h2>Just another blog post</h2>
-			<a class="comments" href="#">33 comments</a>
-			<a href="#"><img src="images/pic6.jpg" alt="" class="top blog-post-image" /></a>
-			<h3>Magna Gravida Dolore</h3>
-			<p>Aenean non massa sapien. In hac habitasse platea dictumst.
-			Maecenas sodales purus et nulla sodales aliquam. Aenean ac
-			porttitor metus. In hac habitasse platea dictumst. Phasellus
-			blandit turpis in leo scelerisque mollis. Nulla venenatis
-			ipsum nec est porta rhoncus. Mauris sodales sed pharetra
-			nisi nec consectetur. Cras elit magna, hendrerit nec
-			consectetur in, sollicitudin vitae justo. Cras amet aliquet
-			Aliquam ligula turpis, feugiat id fermentum malesuada,
-			rutrum eget turpis. Mauris sodales sed pharetra nisi nec
-			consectetur. Cras elit magna, hendrerit nec consectetur
-			in sollicitudin vitae.</p>
-			<footer class="controls">
-				<a href="#" class="button">Continue Reading</a>
-			</footer>
-		</article>
+		<section>
+			<h2>Content ad areas</h2>
+			<ul class="image-list">
+				<li>
+					<a href="#"><img src="images/content-top.png" alt="" class="left" /></a>
+					<h4>content-top</h4>
+					<p>Wide rectangle at the top of the content page</p>
+					<br/>
+				</li>
+				<li>
+					<a href="#"><img src="images/content-text-middle.png" alt="" class="left" /></a>
+					<h4>content-text-middle</h4>
+					<p>Text in the middle of the content page</p>
+					<br/>
+				</li>
+				<li>
+					<a href="#"><img src="images/content-right.png" alt="" class="left" /></a>
+					<h4>content-right</h4>
+					<p>Sky-scrapper at the right of the content page</p>
+					<br/>
+				</li>
+				<li>
+					<a href="#"><img src="images/content-middle.png" alt="" class="left" /></a>
+					<h4>content-middle</h4>
+					<p>Wide rectangle in the middle of the content page</p>
+					<br/>
+				</li>
+				<li>
+					<a href="#"><img src="images/content-left.png" alt="" class="left" /></a>
+					<h4>content-left</h4>
+					<p>Sky-scrapper at the left of the content page</p>
+					<br/>
+				</li>
+				<li>
+					<a href="#"><img src="images/content-bottom.png" alt="" class="left" /></a>
+					<h4>content-bottom</h4>
+					<p>Wide rectangle at the bottom of the content page</p>
+					<br/>
+				</li>
+			</ul>
+		</section>
 
 	</div>
 </div>
+
+<%- ad('home-bottom') %>
+
+
