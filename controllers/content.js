@@ -14,29 +14,16 @@ module.exports = function(app) {
 			banner: 'sample-homebanner',
 		}));
 	});
-	app.get("/one-column",function(req, res) {
+	app.get("/content",function(req, res) {
 		res.render('page-1col',exskel.locals(req,{
 			content: 'sample-lorem',
 		}));
-	});
-	app.get("/two-columns-1",function(req, res) {
-		res.render('page-2col1',exskel.locals(req,{
-			contentLeft: 'sample-lorem',
-			contentRight: 'sample-some-stuff',
+	});	
+	app.get("/admin-ads",function(req, res) {
+		res.render('page-1col',exskel.locals(req,{
+			content: 'ads',
 		}));
 	});
-	app.get("/two-columns-2",function(req, res) {
-		res.render('page-2col2',exskel.locals(req,{
-			contentLeft: 'sample-some-stuff',
-			contentRight: 'sample-lorem',
-		}));
-	});
-	app.get("/three-columns",exskel.forceHttps(function(req, res) {
-		res.render('page-3col',exskel.locals(req,{
-			contentLeft: 'sample-some-stuff2',
-			contentMiddle: 'sample-lorem',
-			contentRight: 'sample-some-stuff',
-		}));
-	}));
+
 }
 
