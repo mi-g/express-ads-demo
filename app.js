@@ -60,9 +60,15 @@ require('express-ads')(app,{
 	    require('express-ads-chitika'),
 	    require('express-ads-adsense'),
 	],
+	demoMode: true, // in demo mode, modifications in ads only affect the current user
+	files: {
+		ads: __dirname + "/ads/ads.json",
+		stats: __dirname + "/ads/stats.json",
+		tmp: __dirname + "/ads/tmp",
+		images: __dirname + "/ads/images",
+	},
 });
 
-require('./controllers/admin.js')(app);
 require('./controllers/content.js')(app);
 
 app.use(function(req, res, next) {
