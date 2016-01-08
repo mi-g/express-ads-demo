@@ -1,27 +1,10 @@
 [{
-	"text": "One column",
-	"link": "/one-column",
-	"sub": [{
-		"text": "MenuItem A",
-		"link": "/one-column/a"
-	},{	
-		"text": "MenuItem B",
-		"link": "/one-column/b"
-	},{	
-		"text": "MenuItem C",
-		"link": "/one-column/c"
-	}]
+	"text": "Home",
+	"link": "/"
 },{
-	"text": "Two columns #1",
-	"link": "/two-columns-1"
+	"text": "Content",
+	"link": "/content"
 },{
-	"text": "Two columns #2",
-	"link": "/two-columns-2"
-},{
-	"text": "Three columns",
-	"link": "/three-columns"
-},{
-	"text": "Admin",
-	"link": "/admin",
-	"admin": true
+	"text": "Admin Ads",
+	"link": "/admin-ads"
 }]
