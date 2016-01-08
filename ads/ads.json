@@ -1,0 +1,679 @@
+{
+    "inventory": {
+        "C3ezU": {
+            "hid": "home-top",
+            "active": false,
+            "size": "728x90",
+            "description": "",
+            "nobanner": "hide",
+            "classes": "text-center",
+            "styles": {
+                "margin-bottom": "30px"
+            },
+            "id": "C3ezU"
+        },
+        "JWypc": {
+            "hid": "home-rect-left",
+            "active": false,
+            "size": "300x250",
+            "description": "",
+            "nobanner": "hide",
+            "classes": "",
+            "styles": {
+                "float": "left",
+                "margin-right": "20px"
+            },
+            "id": "JWypc"
+        },
+        "wyOBp": {
+            "hid": "home-rect-right",
+            "active": true,
+            "size": "300x250",
+            "description": "",
+            "nobanner": "hide",
+            "classes": "",
+            "styles": {
+                "float": "right",
+                "margin-left": "20px"
+            },
+            "id": "wyOBp"
+        },
+        "t2W6l": {
+            "hid": "home-middle",
+            "active": false,
+            "size": "728x90",
+            "description": "",
+            "nobanner": "hide",
+            "classes": "text-center",
+            "styles": {
+                "margin": "20px 0"
+            },
+            "id": "t2W6l"
+        },
+        "KJTbD": {
+            "hid": "home-bottom",
+            "active": true,
+            "size": "728x90",
+            "description": "",
+            "nobanner": "hide",
+            "classes": "text-center",
+            "styles": {
+                "margin": "20px 0"
+            },
+            "id": "KJTbD"
+        },
+        "GXGuG": {
+            "hid": "header-text",
+            "active": false,
+            "size": "text",
+            "description": "",
+            "nobanner": "hide",
+            "classes": "text-center",
+            "styles": {},
+            "id": "GXGuG"
+        },
+        "x2cgf": {
+            "hid": "content-top",
+            "active": true,
+            "size": "728x90",
+            "description": "",
+            "nobanner": "hide",
+            "classes": "text-center",
+            "styles": {
+                "margin-bottom": "20px"
+            },
+            "id": "x2cgf"
+        },
+        "F3g88": {
+            "hid": "content-left",
+            "active": false,
+            "size": "160x600",
+            "description": "",
+            "nobanner": "hide",
+            "classes": "",
+            "styles": {
+                "float": "left",
+                "margin-right": "20px"
+            },
+            "id": "F3g88"
+        },
+        "bKqlf": {
+            "hid": "content-right",
+            "active": true,
+            "size": "160x600",
+            "description": "",
+            "nobanner": "hide",
+            "classes": "",
+            "styles": {
+                "float": "right",
+                "margin-left": "20px"
+            },
+            "id": "bKqlf"
+        },
+        "K4DUU": {
+            "hid": "content-middle",
+            "active": false,
+            "size": "728x90",
+            "description": "",
+            "nobanner": "hide",
+            "classes": "text-center",
+            "styles": {
+                "margin": "10px 0"
+            },
+            "id": "K4DUU"
+        },
+        "Zjb0J": {
+            "hid": "content-text-middle",
+            "active": true,
+            "size": "text",
+            "description": "",
+            "nobanner": "hide",
+            "classes": "",
+            "styles": {},
+            "id": "Zjb0J"
+        },
+        "96ViV": {
+            "hid": "content-bottom",
+            "active": true,
+            "size": "728x90",
+            "description": "",
+            "nobanner": "hide",
+            "classes": "text-center",
+            "styles": {
+                "margin-top": "20px"
+            },
+            "id": "96ViV"
+        },
+        "DKknB": {
+            "hid": "home-scrapper-right",
+            "active": true,
+            "size": "120x600",
+            "description": "",
+            "nobanner": "hide",
+            "classes": "",
+            "styles": {
+                "float": "right",
+                "margin-left": "10px"
+            },
+            "id": "DKknB"
+        },
+        "ZTOkQ": {
+            "hid": "home-scrapper-left",
+            "active": true,
+            "size": "120x240",
+            "description": "",
+            "nobanner": "hide",
+            "classes": "",
+            "styles": {
+                "float": "left",
+                "margin-right": "10px"
+            },
+            "id": "ZTOkQ"
+        }
+    },
+    "campaign": {
+        "LEKml": {
+            "hid": "ExpressAds",
+            "active": true,
+            "type": "background",
+            "value": 1,
+            "cap": 0,
+            "pagecap": 0,
+            "paused": false,
+            "banners": [
+                "8NH0W"
+            ],
+            "description": "",
+            "start": 0,
+            "end": 0,
+            "id": "LEKml"
+        },
+        "qZaBO": {
+            "hid": "Colors",
+            "active": true,
+            "type": "background",
+            "value": 1,
+            "cap": 0,
+            "pagecap": 0,
+            "paused": false,
+            "banners": [
+                "66qqr",
+                "Uv2G8",
+                "SJNnv"
+            ],
+            "description": "",
+            "start": 0,
+            "end": 0,
+            "id": "qZaBO"
+        },
+        "G7Oyt": {
+            "hid": "External",
+            "active": true,
+            "type": "background",
+            "value": 1,
+            "cap": 0,
+            "pagecap": 0,
+            "paused": false,
+            "banners": [
+                "Hd512",
+                "imvX2"
+            ],
+            "description": "",
+            "start": 0,
+            "end": 0,
+            "id": "G7Oyt"
+        }
+    },
+    "banner": {
+        "8NH0W": {
+            "hid": "Express ads",
+            "active": true,
+            "type": "image",
+            "link": "https://github.com/mi-g/express-ads",
+            "alt": "A module for distributing and managing ads locally on an Express web site",
+            "cap": 0,
+            "pagecap": 0,
+            "description": "",
+            "images": {
+                "UCfiw": {
+                    "id": "UCfiw",
+                    "size": "336x280"
+                },
+                "A9QkC": {
+                    "id": "A9QkC",
+                    "size": "160x600"
+                },
+                "mqsf8": {
+                    "id": "mqsf8",
+                    "size": "88x31"
+                },
+                "H5XXk": {
+                    "id": "H5XXk",
+                    "size": "250x250"
+                },
+                "1bqsH": {
+                    "id": "1bqsH",
+                    "size": "728x90"
+                },
+                "8DqHx": {
+                    "id": "8DqHx",
+                    "size": "120x60"
+                },
+                "57Rxa": {
+                    "id": "57Rxa",
+                    "size": "120x90"
+                },
+                "pTonn": {
+                    "id": "pTonn",
+                    "size": "120x600"
+                },
+                "jJoyd": {
+                    "id": "jJoyd",
+                    "size": "234x60"
+                },
+                "Q8F7m": {
+                    "id": "Q8F7m",
+                    "size": "468x60"
+                },
+                "8pS66": {
+                    "id": "8pS66",
+                    "size": "180x150"
+                },
+                "lqB4G": {
+                    "id": "lqB4G",
+                    "size": "300x250"
+                },
+                "l68xv": {
+                    "id": "l68xv",
+                    "size": "125x125"
+                },
+                "J5TNo": {
+                    "id": "J5TNo",
+                    "size": "240x400"
+                },
+                "v8L0f": {
+                    "id": "v8L0f",
+                    "size": "120x240"
+                }
+            },
+            "inventory": [
+                "wyOBp",
+                "KJTbD",
+                "x2cgf",
+                "bKqlf",
+                "96ViV",
+                "DKknB",
+                "ZTOkQ"
+            ],
+            "countryType": "any",
+            "countries": [],
+            "browserType": "any",
+            "browsers": [],
+            "osType": "any",
+            "oss": [],
+            "adbUsed": true,
+            "adbUnsure": true,
+            "adbUnused": true,
+            "id": "8NH0W"
+        },
+        "66qqr": {
+            "hid": "Red",
+            "active": false,
+            "type": "image",
+            "link": "https://www.jocly.com/#/play/cylinder-chess",
+            "alt": "A world of red",
+            "cap": 0,
+            "pagecap": 0,
+            "description": "",
+            "images": {
+                "hV7uc": {
+                    "id": "hV7uc",
+                    "size": "180x150"
+                },
+                "oidAM": {
+                    "id": "oidAM",
+                    "size": "468x60"
+                },
+                "e0EBM": {
+                    "id": "e0EBM",
+                    "size": "728x90"
+                },
+                "vy3ac": {
+                    "id": "vy3ac",
+                    "size": "336x280"
+                },
+                "NJ4sU": {
+                    "id": "NJ4sU",
+                    "size": "250x250"
+                },
+                "lKcTD": {
+                    "id": "lKcTD",
+                    "size": "120x600"
+                },
+                "jT9hX": {
+                    "id": "jT9hX",
+                    "size": "120x240"
+                },
+                "66xHg": {
+                    "id": "66xHg",
+                    "size": "240x400"
+                },
+                "UGYR9": {
+                    "id": "UGYR9",
+                    "size": "234x60"
+                },
+                "e9CDU": {
+                    "id": "e9CDU",
+                    "size": "125x125"
+                },
+                "ehDwq": {
+                    "id": "ehDwq",
+                    "size": "120x90"
+                },
+                "JaLVp": {
+                    "id": "JaLVp",
+                    "size": "120x60"
+                },
+                "GGF12": {
+                    "id": "GGF12",
+                    "size": "160x600"
+                },
+                "ddoDu": {
+                    "id": "ddoDu",
+                    "size": "88x31"
+                },
+                "ZHYg9": {
+                    "id": "ZHYg9",
+                    "size": "300x250"
+                }
+            },
+            "inventory": [
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                "DKknB",
+                "ZTOkQ",
+                "wyOBp",
+                "ZTOkQ",
+                "wyOBp",
+                "KJTbD",
+                "x2cgf",
+                "bKqlf",
+                "96ViV",
+                "DKknB"
+            ],
+            "countryType": "any",
+            "countries": [],
+            "browserType": "any",
+            "browsers": [],
+            "osType": "any",
+            "oss": [],
+            "adbUsed": true,
+            "adbUnsure": true,
+            "adbUnused": true,
+            "id": "66qqr"
+        },
+        "Uv2G8": {
+            "hid": "Green-Blue",
+            "active": true,
+            "type": "image",
+            "link": "https://www.jocly.com/#/play/scrum",
+            "alt": "Green or Blue",
+            "cap": 0,
+            "pagecap": 0,
+            "description": "",
+            "images": {
+                "wtcmo": {
+                    "id": "wtcmo",
+                    "size": "180x150"
+                },
+                "Kx0Kk": {
+                    "id": "Kx0Kk",
+                    "size": "250x250"
+                },
+                "jjBAT": {
+                    "id": "jjBAT",
+                    "size": "120x600"
+                },
+                "W1rIk": {
+                    "id": "W1rIk",
+                    "size": "120x240"
+                },
+                "Gkio3": {
+                    "id": "Gkio3",
+                    "size": "240x400"
+                },
+                "bpgWi": {
+                    "id": "bpgWi",
+                    "size": "728x90"
+                },
+                "kRBJR": {
+                    "id": "kRBJR",
+                    "size": "234x60"
+                },
+                "YN08A": {
+                    "id": "YN08A",
+                    "size": "125x125"
+                },
+                "RNCtQ": {
+                    "id": "RNCtQ",
+                    "size": "120x90"
+                },
+                "2Zxl9": {
+                    "id": "2Zxl9",
+                    "size": "468x60"
+                },
+                "0m454": {
+                    "id": "0m454",
+                    "size": "120x60"
+                },
+                "THnw1": {
+                    "id": "THnw1",
+                    "size": "336x280"
+                },
+                "CBtCz": {
+                    "id": "CBtCz",
+                    "size": "88x31"
+                },
+                "TAFiF": {
+                    "id": "TAFiF",
+                    "size": "300x250"
+                },
+                "NMztp": {
+                    "id": "NMztp",
+                    "size": "160x600"
+                },
+                "4ilU7": {
+                    "id": "4ilU7",
+                    "size": "180x150"
+                },
+                "FPEVS": {
+                    "id": "FPEVS",
+                    "size": "728x90"
+                },
+                "jHK93": {
+                    "id": "jHK93",
+                    "size": "468x60"
+                },
+                "rIiCG": {
+                    "id": "rIiCG",
+                    "size": "336x280"
+                },
+                "rllAa": {
+                    "id": "rllAa",
+                    "size": "250x250"
+                },
+                "3y8ZG": {
+                    "id": "3y8ZG",
+                    "size": "120x600"
+                },
+                "5lPik": {
+                    "id": "5lPik",
+                    "size": "120x240"
+                },
+                "kw2T5": {
+                    "id": "kw2T5",
+                    "size": "240x400"
+                },
+                "mK9rT": {
+                    "id": "mK9rT",
+                    "size": "234x60"
+                },
+                "rmBPy": {
+                    "id": "rmBPy",
+                    "size": "125x125"
+                },
+                "Jaavy": {
+                    "id": "Jaavy",
+                    "size": "120x90"
+                },
+                "ojixZ": {
+                    "id": "ojixZ",
+                    "size": "120x60"
+                },
+                "iKwT2": {
+                    "id": "iKwT2",
+                    "size": "300x250"
+                },
+                "p32bB": {
+                    "id": "p32bB",
+                    "size": "160x600"
+                },
+                "AxprT": {
+                    "id": "AxprT",
+                    "size": "88x31"
+                }
+            },
+            "inventory": [
+                "wyOBp",
+                "KJTbD",
+                "x2cgf",
+                "bKqlf",
+                "96ViV",
+                "DKknB",
+                "ZTOkQ"
+            ],
+            "countryType": "any",
+            "countries": [],
+            "browserType": "any",
+            "browsers": [],
+            "osType": "any",
+            "oss": [],
+            "adbUsed": true,
+            "adbUnsure": true,
+            "adbUnused": true,
+            "id": "Uv2G8"
+        },
+        "Hd512": {
+            "hid": "AdSense 300x250",
+            "active": true,
+            "type": "adSense",
+            "link": "",
+            "alt": "",
+            "cap": 0,
+            "pagecap": 0,
+            "description": "",
+            "images": {},
+            "inventory": [
+                "wyOBp",
+                "KJTbD",
+                "x2cgf",
+                "96ViV"
+            ],
+            "countryType": "any",
+            "countries": [],
+            "browserType": "any",
+            "browsers": [],
+            "osType": "any",
+            "oss": [],
+            "adbUsed": true,
+            "adbUnsure": true,
+            "adbUnused": true,
+            "texts": {},
+            "id": "Hd512",
+            "addon": {
+                "adslot": "4591103565"
+            }
+        },
+        "imvX2": {
+            "hid": "Chitika",
+            "active": true,
+            "type": "chitika",
+            "link": "",
+            "alt": "",
+            "cap": 0,
+            "pagecap": 0,
+            "description": "",
+            "images": {},
+            "inventory": [
+                "KJTbD",
+                "x2cgf",
+                "96ViV"
+            ],
+            "countryType": "any",
+            "countries": [],
+            "browserType": "any",
+            "browsers": [],
+            "osType": "any",
+            "oss": [],
+            "adbUsed": true,
+            "adbUnsure": true,
+            "adbUnused": true,
+            "texts": {},
+            "id": "imvX2",
+            "addon": {}
+        },
+        "SJNnv": {
+            "hid": "ExpressAds text",
+            "active": true,
+            "type": "text",
+            "link": "https://github.com/mi-g/express-ads",
+            "alt": "",
+            "cap": 0,
+            "pagecap": 0,
+            "description": "",
+            "images": {},
+            "inventory": [
+                "GXGuG",
+                "Zjb0J"
+            ],
+            "countryType": "any",
+            "countries": [],
+            "browserType": "any",
+            "browsers": [],
+            "osType": "any",
+            "oss": [],
+            "adbUsed": true,
+            "adbUnsure": true,
+            "adbUnused": true,
+            "texts": {
+                "gEKri": {
+                    "id": "gEKri",
+                    "text": "Express-Ads Rocks !!!"
+                },
+                "2cpbC": {
+                    "id": "2cpbC",
+                    "text": "Visit [[express-ads]] for more details"
+                }
+            },
+            "id": "SJNnv"
+        }
+    },
+    "addons": {
+        "chitika": {
+            "pubid": "michelgutierrez"
+        },
+        "adSense": {
+            "adclient": "ca-pub-4005842475268579"
+        }
+    }
+}
