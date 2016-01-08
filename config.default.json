@@ -1,15 +1,13 @@
 {
-	"login": "admin",
-	"password": "5e884898da28047151d0e56f8dc6292773603d0d6aabbdd62a11ef721d1542d8",
-	"sessionSecret": "j98n41eMrFmTY",
+	"sessionSecret": "zNqnwu4cw7Jcc",
 	"staticMaxAge": "7d",
-	"siteName": "Exskel",
+	"siteName": "Express-ads demo",
 	"domain": null,
 	"shutdownTimeout": 5,
 	"sessionExpiration": 259200,
-	"parseUserAgent": true,
-	"geoip": true,
-	"gaTrackingCode": null,
+	"parseUserAgent": false,
+	"geoip": false,
+	"gaTrackingCode": "UA-1041911-55",
 	"http": {
 		"port": 9080,
 		"disabled": false,
@@ -47,5 +45,6 @@
 	"concatScripts": true,
 	"minifyScripts": true,
 	"criticalPathStyles": true,
-	"forceAdmin": false
+	"forceAdmin": false,
+	"showErrorStack": false	
 }
