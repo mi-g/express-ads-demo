@@ -1,8 +1,11 @@
 
 <h2>Error</h2>
 
-<p>We are sorry about that but shit happens.</p>
+<pre style="overflow: visible">
+<%= error %>
+</pre>
 
-<p><strong><%= error.message %></strong></p>
+<% if(config.showErrorStack) { %>
+<pre style="overflow: visible"><%= error.stack %></pre>
+<% } %>
 
-<p><pre><%= error.stack %></pre></p>
