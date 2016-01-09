@@ -248,7 +248,7 @@ function GoogleAnalytics() {
 		var parts = [];
 		parts.push("<script>");
 		parts.push("window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;");
-		parts.push("ga('create', '"+ config.gaTrackingCode +"', '<%= req.hostname %>');");
+		parts.push("ga('create', '"+ config.gaTrackingCode +"', '"+this.req.hostname+"');");
 		parts.push("ga('send', 'pageview','" + (this.gaPath || this.req.path) + "');");
 		if(this.gaEvents)
 			gaEvents.forEach(function(event) {
