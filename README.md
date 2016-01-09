@@ -8,6 +8,8 @@ however the changes are only viewable by this user. Plus, the whole configuratio
 
 You can use this site online from [http://demo.eas.rocks/](http://demo.eas.rocks/).
 
+The site is based on [Exskel](https://github.com/mi-g/exskel), a skeleton to get a running Express/Node web site quickly.
+
 ## Run the site in your dev environment
 
 * clone this repository
