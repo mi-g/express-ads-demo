@@ -38,6 +38,45 @@ app.use(session({
 	saveUninitialized: true,
 }));
 
+// save resources on the server by blocking IPs that do not maintain a session
+var blockedIps = {};
+var ips = {};
+app.use(function(req,res,next) {
+	if(req.ip in blockedIps)
+		return res.send(420,"Enhance Your Calm");
+	if(req.session && req.session.modelId)
+		return next();
+	var now = Date.now();
+	var entry = ips[req.ip];
+	if(!entry) {
+		ips[req.ip] = [now];
+	} else {
+		entry.push(now);
+		if(entry.length>=3) {
+			blockedIps[req.ip] = now + 24*60*60*1000;
+			console.info("Blocked IP",req.ip);
+			return res.send(420,"Enhance Your Calm");
+		}
+	}
+	next();
+});
+setInterval(function() {
+	var now = Date.now();
+	var oneminago = now - 60*1000;
+	for(var ip in blockedIps)
+		if(now>blockedIps[ip]) {
+			console.info("Unblocked IP",req.ip);
+			delete blockedIps[ip];
+		}
+	for(var ip in ips) {
+		var entry = ips[ip];
+		while(entry.length && entry[0]<oneminago)
+			entry.shift();
+		if(entry.length==0)
+			delete ips[ip];
+	}
+},60*1000);
+
 exskel.post(app);
 
 require('express-ads')(app,{
