@@ -250,7 +250,7 @@ function GoogleAnalytics() {
 		parts.push("window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;");
 		parts.push("ga('create', '"+ config.gaTrackingCode +"', '<%= req.hostname %>');");
 		parts.push("ga('send', 'pageview','" + (this.gaPath || this.req.path) + "');");
-		if(locals.gaEvents)
+		if(this.gaEvents)
 			gaEvents.forEach(function(event) {
 				parts.push("ga('send','event','" + event.join("','") +"');");
 			});
